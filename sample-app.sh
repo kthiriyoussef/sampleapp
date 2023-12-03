@@ -1,6 +1,4 @@
-mkdir tempdir
-mkdir tempdir/templates
-mkdir tempdir/static
+
 
 cp sample_app.py tempdir/.
 cp -r templates/* tempdir/templates/.
@@ -15,6 +13,6 @@ echo "EXPOSE 5050" >> tempdir/Dockerfile
 echo "CMD python /home/myapp/sample_app.py" >> tempdir/Dockerfile
 
 cd tempdir
-/usr/bin/docker build -t sampleapp .
-/usr/bin/docker run -t -d -p 5050:5050 --name samplerunning sampleapp
-/usr/bin/docker ps -a
+/usr/bin/docker sudo  build -t sampleapp .
+/usr/bin/docker sudo  run -t -d -p 5050:5050 --name samplerunning sampleapp
+/usr/bin/docker sudo ps -a
