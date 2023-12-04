@@ -1,3 +1,6 @@
+apt-get update
+apt-get install -y docker.io
+
 mkdir tempdir
 mkdir tempdir/templates
 mkdir tempdir/static
